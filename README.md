@@ -4,7 +4,7 @@ A dynamic, interactive web-based quiz application that tests your knowledge abou
 
 ## 📸 Screenshots
 
-*(Add your screenshots or GIFs here showing the quiz interface, different question types, and the results screen)*
+![](./src/assets/thumbnail.jpg)
 
 ## ✨ Features
 
@@ -31,7 +31,7 @@ A dynamic, interactive web-based quiz application that tests your knowledge abou
 
 ## 🔗 API Integration
 
-This project relies on the [countries.dev API](https://countries.dev/). 
+This project relies on the [countries.dev API](https://countries.dev/).
 Specifically, it fetches from the `/countries` endpoint, which returns all country data including name, capital, region, subregion, flags, and languages. The raw data is then shuffled and formatted into 5 distinct multiple-choice question formats.
 
 ## 🚀 Installation & Setup
@@ -39,25 +39,24 @@ Specifically, it fetches from the `/countries` endpoint, which returns all count
 To run this project locally, follow these steps:
 
 1. **Clone the repository:**
+
    ```bash
-   git clone https://github.com/yourusername/country-quiz.git
+   git clone https://github.com/Anonymous-Cooder/country-quiz.git
    cd country-quiz
    ```
 
 2. **Install dependencies:**
    Make sure you have Node.js installed, then run:
+
    ```bash
    npm install
    ```
 
 3. **Start the development server:**
+
    ```bash
    npm run dev
    ```
 
 4. **Open in browser:**
    Open `http://localhost:5173` (or the port provided by Vite) in your web browser.
-
-## 📜 License
-
-This project is open-source and available under the [MIT License](LICENSE).
