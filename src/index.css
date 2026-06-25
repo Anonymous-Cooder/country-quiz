@@ -1,0 +1,44 @@
+@import "tailwindcss";
+@theme {
+  --breakpoint-xs: 30rem; /* New breakpoint (480px) */
+  --font-be-vietnam-pro: "Be Vietnam Pro";
+  --background-image-small-img: url("./assets/bg-sm.jpg");
+  --background-image-large-img: url("./assets/bg.jpg");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Be Vietnam Pro";
+}
+
+/* Smooth gradient crossfade utility */
+.staggered-transition {
+  position: relative;
+  z-index: 1; /* Keep text/images in front */
+
+  transition: scale 0.3s ease-in-out; /* Smooth size transition */
+}
+
+/* The invisible gradient overlay */
+.staggered-transition::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background-image: linear-gradient(to right, #e65895, #bc6be8);
+  opacity: 0;
+  z-index: -1; /* Push behind the text */
+  transition: opacity 0.3s ease-in-out; /* Smooth color crossfade transition! */
+}
+
+/* On hover, fade the gradient in (only if not disabled) */
+.staggered-transition:not(:disabled):hover::before {
+  opacity: 1;
+}
+
+/* If a button is "active" (like Sweden), keep the gradient on */
+.staggered-transition.active-btn::before {
+  opacity: 1;
+}
